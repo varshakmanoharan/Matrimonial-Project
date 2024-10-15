@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback_and_ratings",
+  "info": {
+    "singularName": "feedback-and-rating",
+    "pluralName": "feedback-and-ratings",
+    "displayName": "feedback and rating",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "feedback_and_rating"
+    },
+    "profile_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "feedback_and_rating"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "feedback": {
+      "type": "text"
+    }
+  }
+}

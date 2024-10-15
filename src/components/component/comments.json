@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_component_comments",
+  "info": {
+    "displayName": "comments",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
+    },
+    "content": {
+      "type": "text"
+    },
+    "create_at": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "privacy_settings",
+  "info": {
+    "singularName": "privacy-setting",
+    "pluralName": "privacy-settings",
+    "displayName": "privacy setting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profile_visibility": {
+      "type": "enumeration",
+      "enum": [
+        "Public",
+        "Only Matches",
+        "Private"
+      ]
+    },
+    "can_contact": {
+      "type": "enumeration",
+      "enum": [
+        "Everyone",
+        "Only Matches",
+        "No One"
+      ]
+    },
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "privacy_setting"
+    }
+  }
+}

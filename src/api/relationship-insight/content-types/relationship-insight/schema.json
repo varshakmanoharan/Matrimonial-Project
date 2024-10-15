@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relationship_insights",
+  "info": {
+    "singularName": "relationship-insight",
+    "pluralName": "relationship-insights",
+    "displayName": "relationship insight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Communication",
+        "Trust",
+        "Respect",
+        "Conflict Resolution",
+        "Intimacy",
+        "General"
+      ]
+    }
+  }
+}

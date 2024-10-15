@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horoscope_informations",
+  "info": {
+    "singularName": "horoscope-information",
+    "pluralName": "horoscope-informations",
+    "displayName": "Horoscope Information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_of_birth": {
+      "type": "date"
+    },
+    "country_of_birth": {
+      "type": "string"
+    },
+    "state_of_birth": {
+      "type": "string"
+    },
+    "city_of_birth": {
+      "type": "string"
+    },
+    "time_of_birth": {
+      "type": "time"
+    },
+    "chart_style": {
+      "type": "enumeration",
+      "enum": [
+        "South Indian",
+        "North Indian",
+        "East Indian",
+        "Kerala"
+      ]
+    },
+    "horoscope": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "mappedBy": "horoscope_information"
+    }
+  }
+}

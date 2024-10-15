@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_component_religious_infos",
+  "info": {
+    "displayName": "religious info"
+  },
+  "options": {},
+  "attributes": {
+    "religion": {
+      "type": "string"
+    },
+    "caste": {
+      "type": "string"
+    },
+    "subcaste": {
+      "type": "string"
+    }
+  }
+}

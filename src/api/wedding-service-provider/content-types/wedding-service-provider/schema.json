@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wedding_service_providers",
+  "info": {
+    "singularName": "wedding-service-provider",
+    "pluralName": "wedding-service-providers",
+    "displayName": "wedding service provider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "contact_information": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "special_offer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.special-offer"
+    }
+  }
+}

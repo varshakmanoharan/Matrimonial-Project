@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "troubleshooting_guides",
+  "info": {
+    "singularName": "troubleshooting-guide",
+    "pluralName": "troubleshooting-guides",
+    "displayName": "troubleshooting guide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "issue": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    }
+  }
+}

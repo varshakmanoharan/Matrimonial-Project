@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_profiles",
+  "info": {
+    "singularName": "video-profile",
+    "pluralName": "video-profiles",
+    "displayName": "video_profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "video_profile"
+    },
+    "description": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

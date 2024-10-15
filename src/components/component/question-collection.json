@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_component_question_collections",
+  "info": {
+    "displayName": "question collection"
+  },
+  "options": {},
+  "attributes": {
+    "question_text": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json"
+    },
+    "correct_option": {
+      "type": "integer"
+    }
+  }
+}

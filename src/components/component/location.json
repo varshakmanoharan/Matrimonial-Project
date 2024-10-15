@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_component_locations",
+  "info": {
+    "displayName": "location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "region": {
+      "type": "string"
+    }
+  }
+}

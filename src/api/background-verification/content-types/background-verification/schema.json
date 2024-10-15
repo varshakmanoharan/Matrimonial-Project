@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "background_verifications",
+  "info": {
+    "singularName": "background-verification",
+    "pluralName": "background-verifications",
+    "displayName": "background verification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "background_verification"
+    },
+    "verification_type": {
+      "type": "enumeration",
+      "enum": [
+        "Id",
+        "photo",
+        "education",
+        "employment"
+      ]
+    },
+    "verified_by": {
+      "type": "enumeration",
+      "enum": [
+        "Admin"
+      ]
+    },
+    "verified_at": {
+      "type": "date"
+    },
+    "details": {
+      "type": "string"
+    },
+    "verification_document": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::verification-document.verification-document",
+      "inversedBy": "background_verifications"
+    }
+  }
+}

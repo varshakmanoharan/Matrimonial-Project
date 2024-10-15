@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_height_preferences",
+  "info": {
+    "displayName": "height preference",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "From": {
+      "type": "integer"
+    },
+    "To": {
+      "type": "integer"
+    }
+  }
+}

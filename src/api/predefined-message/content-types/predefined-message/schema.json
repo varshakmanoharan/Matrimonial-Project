@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "predefined_messages",
+  "info": {
+    "singularName": "predefined-message",
+    "pluralName": "predefined-messages",
+    "displayName": "predefined message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "predefined_message"
+    },
+    "interest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::interest.interest",
+      "mappedBy": "predefined_message"
+    }
+  }
+}

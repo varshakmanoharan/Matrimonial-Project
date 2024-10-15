@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_component_social_media_verifies",
+  "info": {
+    "displayName": "social media verify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "profile_id": {
+      "type": "string"
+    },
+    "profile_url": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Linkedin"
+      ]
+    }
+  }
+}

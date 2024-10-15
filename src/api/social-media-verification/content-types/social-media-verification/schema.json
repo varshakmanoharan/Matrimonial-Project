@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_media_verifications",
+  "info": {
+    "singularName": "social-media-verification",
+    "pluralName": "social-media-verifications",
+    "displayName": "social media verification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "social_media_verification"
+    },
+    "provider": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Linkedin"
+      ]
+    },
+    "profile_url": {
+      "type": "string"
+    },
+    "profile_id": {
+      "type": "string"
+    }
+  }
+}

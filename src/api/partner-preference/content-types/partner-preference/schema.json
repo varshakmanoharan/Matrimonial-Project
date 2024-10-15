@@ -1,0 +1,263 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_preferences",
+  "info": {
+    "singularName": "partner-preference",
+    "pluralName": "partner-preferences",
+    "displayName": "Partner Preference",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "age_preference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.age"
+    },
+    "height_preference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.height-preference"
+    },
+    "complexion": {
+      "type": "enumeration",
+      "enum": [
+        "Any",
+        "Brown",
+        "Dark",
+        "Doesn't Matter",
+        "Fair",
+        "Medium",
+        "Olive",
+        "Very Fair"
+      ]
+    },
+    "physical_status": {
+      "type": "enumeration",
+      "enum": [
+        "Any",
+        "Athletic",
+        "Average",
+        "Doesn't Matter",
+        "Fit",
+        "Muscular",
+        "Overweight",
+        "Slim",
+        "Underweight",
+        "Handicapped"
+      ]
+    },
+    "eating_habits": {
+      "type": "enumeration",
+      "enum": [
+        "Doesn't Matter",
+        "Vegetarian",
+        "Non-vegetarian",
+        "Eggetarian"
+      ]
+    },
+    "drinking_habits": {
+      "type": "enumeration",
+      "enum": [
+        "Doesn't Matter",
+        "No",
+        "Occassionally",
+        "Yes"
+      ]
+    },
+    "smoking_habits": {
+      "type": "enumeration",
+      "enum": [
+        "Doesn't Matter",
+        "Yes",
+        "Occassionally",
+        "No"
+      ]
+    },
+    "ethnic_group": {
+      "type": "enumeration",
+      "enum": [
+        "Doesn't Matter",
+        "Assamese",
+        "Awadhi",
+        "Bengali",
+        "Bhojpuri",
+        "Chhattisgarhi",
+        "Gujarati",
+        "Haryanvi",
+        "Hindi-speaking people",
+        "Kannada",
+        "Kashmiri",
+        "Konkani",
+        "Maithili",
+        "Malayali",
+        "Marathi",
+        "Nepali",
+        "Odia",
+        "Punjabi",
+        "Rajasthani",
+        "Sindhi",
+        "Tamil",
+        "Telugu",
+        "Tulu"
+      ]
+    },
+    "appearence": {
+      "type": "enumeration",
+      "enum": [
+        "Doesn't Matter",
+        "Athletic",
+        "Average",
+        "Chubby",
+        "Curvy",
+        "Fit",
+        "Muscular",
+        "Petite",
+        "Plus Size",
+        "Slim",
+        "Tall",
+        "Short",
+        "Well-groomed"
+      ]
+    },
+    "languages_spoken": {
+      "type": "customField",
+      "options": [
+        "Any",
+        "Afrikaans  ",
+        "Ainu  ",
+        "Albanian  ",
+        "Amharic  ",
+        "Armenian  ",
+        "Assamese  ",
+        "Aymara  ",
+        "Azerbaijani  ",
+        "Basaa  ",
+        "Basque  ",
+        "Bemba  ",
+        "Bengali  ",
+        "Berber  ",
+        "Bosnian  ",
+        "Bulgarian  ",
+        "Burmese  ",
+        "Catalan  ",
+        "Cebuano  ",
+        "Chichewa  ",
+        "Cherokee  ",
+        "Chinese, Mandarin  ",
+        "Croatian  ",
+        "Czech  ",
+        "Danish  ",
+        "Dinka  ",
+        "Dutch  ",
+        "English  ",
+        "Esperanto  ",
+        "Estonian  ",
+        "Ewe  ",
+        "Faroese  ",
+        "Farsi (Persian)  ",
+        "Filipino (Tagalog)  ",
+        "Finnish  ",
+        "French  ",
+        "Fula (Fulani)  ",
+        "Georgian  ",
+        "German  ",
+        "Greek  ",
+        "Greenlandic (Kalaallisut)  ",
+        "Gujarati  ",
+        "Hausa  ",
+        "Hebrew  ",
+        "Hindi  ",
+        "Hopi  ",
+        "Hungarian  ",
+        "Icelandic  ",
+        "Indonesian  ",
+        "Inuktitut  ",
+        "Irish (Gaelic)  ",
+        "Italian  ",
+        "Japanese  ",
+        "Javanese  ",
+        "Kazakh  ",
+        "Khmer (Cambodian)  ",
+        "Kinyarwanda  ",
+        "Kirundi  ",
+        "Korean  ",
+        "Kurdish  ",
+        "Lao  ",
+        "Latvian  ",
+        "Lithuanian  ",
+        "Macedonian  ",
+        "Maasai  ",
+        "Malay",
+        "Malayalam  ",
+        "Maltese  ",
+        "Maori  ",
+        "Marathi  ",
+        "Mongolian  ",
+        "Myanmar (Burmese)  ",
+        "Navajo  ",
+        "Nepali  ",
+        "Norwegian  ",
+        "Odia  ",
+        "Polish  ",
+        "Portuguese  ",
+        "Quechua  ",
+        "Romanian  ",
+        "Russian",
+        "Samoan  ",
+        "Serbian   ",
+        "Sinhala",
+        "Sioux  ",
+        "Slovak  ",
+        "Slovenian  ",
+        "Somali  ",
+        "Spanish  ",
+        "Sundanese  ",
+        "Swahili  ",
+        "Swedish  ",
+        "Tahitian  ",
+        "Tamil  ",
+        "Telugu  ",
+        "Thai  ",
+        "Tibetan  ",
+        "Tswana  ",
+        "Tulu ",
+        "Turkish",
+        "Tongan  ",
+        "Ukrainian  ",
+        "Urdu  ",
+        "Uzbek  ",
+        "Vietnamese  ",
+        "Welsh  ",
+        "Xhosa  ",
+        "Yoruba  ",
+        "Zulu"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "religious_preference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.religion-preference"
+    },
+    "partner_education_preference": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.partner-education-preference"
+    },
+    "partner_location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.partner-location"
+    },
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "partner_preference"
+    }
+  }
+}

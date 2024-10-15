@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "match_reviews",
+  "info": {
+    "singularName": "match-review",
+    "pluralName": "match-reviews",
+    "displayName": "match_review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "potential_match_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "mappedBy": "match_review"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "review_date": {
+      "type": "datetime"
+    },
+    "family_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::family-profile.family-profile",
+      "inversedBy": "match_review"
+    },
+    "reviewed_by": {
+      "type": "enumeration",
+      "enum": [
+        "father",
+        "mother",
+        "sister",
+        "brother",
+        "family member"
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Frontech\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install --production --no-optional --network-timeout 1000000
+
+PATH: 
+  C:\Users\Frontech\AppData\Local\npm-cache\_npx\2d56dd13733e9da7\node_modules\.bin;D:\ere\strapi_matrimony\node_modules\.bin;D:\ere\node_modules\.bin;D:\node_modules\.bin;C:\Users\Frontech\AppData\Roaming\nvm\v20.12.2\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\MinGW\bin;C:\Program Files\Java\jdk-18.0.2.1\bin;C:\Program Files (x86)\dotnet\;C:\ProgramData\chocolatey\bin;C:\Users\Frontech\AppData\Roaming\nvm;C:\Program Files\nodejs;;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Frontech\AppData\Local\Microsoft\WindowsApps;C:\MinGW\bin;C:\Users\Frontech\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Frontech\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.12.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@strapi/strapi/-/strapi-4.24.3.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Frontech\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (node:events:632:28)
+      at ClientRequest.emit (node:events:518:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:845:9)
+      at Object.onceWrapper (node:events:632:28)
+      at TLSSocket.emit (node:events:530:35)
+      at Socket._onTimeout (node:net:589:8)
+      at listOnTimeout (node:internal/timers:573:17)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "matrimony",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A Strapi application",
+    "scripts": {
+      "develop": "strapi develop",
+      "start": "strapi start",
+      "build": "strapi build",
+      "strapi": "strapi"
+    },
+    "devDependencies": {},
+    "dependencies": {
+      "@strapi/strapi": "4.24.3",
+      "@strapi/plugin-users-permissions": "4.24.3",
+      "@strapi/plugin-i18n": "4.24.3",
+      "@strapi/plugin-cloud": "4.24.3",
+      "mysql": "2.18.1",
+      "react": "^18.0.0",
+      "react-dom": "^18.0.0",
+      "react-router-dom": "5.3.4",
+      "styled-components": "5.3.3"
+    },
+    "author": {
+      "name": "A Strapi developer"
+    },
+    "strapi": {
+      "uuid": "22e0f906-98eb-4631-a606-bc4d472d8e4c"
+    },
+    "engines": {
+      "node": ">=18.0.0 <=20.x.x",
+      "npm": ">=6.0.0"
+    },
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

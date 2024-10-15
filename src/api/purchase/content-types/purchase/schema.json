@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchases",
+  "info": {
+    "singularName": "purchase",
+    "pluralName": "purchases",
+    "displayName": "purchase",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "purchase"
+    },
+    "subscription_plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscription-plan.subscription-plan",
+      "inversedBy": "purchase"
+    },
+    "purchase_date": {
+      "type": "date"
+    },
+    "expiry_date": {
+      "type": "date"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "one-time feature",
+        "boost"
+      ]
+    },
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "bank transfer",
+        "paypal",
+        "credit card"
+      ]
+    }
+  }
+}

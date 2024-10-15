@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_component_comment",
+  "info": {
+    "displayName": "socialnw comment"
+  },
+  "options": {},
+  "attributes": {
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member"
+    },
+    "content": {
+      "type": "text"
+    },
+    "socialnw_post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::socialnw-post.socialnw-post"
+    }
+  }
+}

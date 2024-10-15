@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trust_badges",
+  "info": {
+    "singularName": "trust-badge",
+    "pluralName": "trust-badges",
+    "displayName": "Trust badge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "members": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::member.member",
+      "inversedBy": "trust_badges"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "socialnw_posts",
+  "info": {
+    "singularName": "socialnw-post",
+    "pluralName": "socialnw-posts",
+    "displayName": "socialnw post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "socialnw_post"
+    },
+    "content": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::member.member",
+      "inversedBy": "socialnw_posts"
+    },
+    "comments": {
+      "displayName": "socialnw comment",
+      "type": "component",
+      "repeatable": true,
+      "component": "component.socialnw-comment"
+    }
+  }
+}

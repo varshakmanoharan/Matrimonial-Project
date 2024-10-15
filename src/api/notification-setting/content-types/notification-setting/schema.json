@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notification_settings",
+  "info": {
+    "singularName": "notification-setting",
+    "pluralName": "notification-settings",
+    "displayName": "notification setting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "notification_setting"
+    },
+    "notify_on_new_match": {
+      "type": "boolean",
+      "default": true
+    },
+    "notify_on_message": {
+      "type": "boolean",
+      "default": true
+    },
+    "notify_on_interest": {
+      "type": "boolean",
+      "default": true
+    },
+    "notify_on_profile_view": {
+      "type": "boolean"
+    }
+  }
+}

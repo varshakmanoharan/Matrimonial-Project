@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "family_profiles",
+  "info": {
+    "singularName": "family-profile",
+    "pluralName": "family-profiles",
+    "displayName": "family_profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "family_name": {
+      "type": "string"
+    },
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "inversedBy": "family_profile"
+    },
+    "joint_accounts": {
+      "type": "json"
+    },
+    "match_review": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match-review.match-review",
+      "mappedBy": "family_id"
+    }
+  }
+}

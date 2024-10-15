@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_ages",
+  "info": {
+    "displayName": "Age preference",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "From": {
+      "type": "integer"
+    },
+    "To": {
+      "type": "integer"
+    }
+  }
+}

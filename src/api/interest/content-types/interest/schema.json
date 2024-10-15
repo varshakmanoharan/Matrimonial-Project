@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interests",
+  "info": {
+    "singularName": "interest",
+    "pluralName": "interests",
+    "displayName": "Interest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "interests"
+    },
+    "interested_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "interests"
+    },
+    "interest": {
+      "type": "enumeration",
+      "enum": [
+        "Accept",
+        "Decline",
+        "Send Interest",
+        "Don't Show"
+      ]
+    },
+    "predefined_message": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::predefined-message.predefined-message",
+      "inversedBy": "interest"
+    }
+  }
+}

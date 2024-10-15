@@ -1,0 +1,328 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "dob": {
+      "type": "date"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "family_background": {
+      "type": "enumeration",
+      "enum": [
+        "Traditional",
+        "Moderate",
+        "Liberal"
+      ]
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "member_id"
+    },
+    "profile_created_for": {
+      "type": "enumeration",
+      "enum": [
+        "Myself",
+        "Son",
+        "Daughter",
+        "Sister",
+        "Brother",
+        "Friend",
+        "Relative"
+      ]
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "marital_status": {
+      "type": "enumeration",
+      "enum": [
+        "Never Married",
+        "Widow",
+        "Divorced",
+        "Awaiting Divorce"
+      ]
+    },
+    "eating_habits": {
+      "type": "enumeration",
+      "enum": [
+        "Vegetarian",
+        "Non-vegetarian",
+        "Eggetarian"
+      ]
+    },
+    "drinking_habits": {
+      "type": "enumeration",
+      "enum": [
+        "No",
+        "Occasionally",
+        "Yes"
+      ]
+    },
+    "smoking_habits": {
+      "type": "enumeration",
+      "enum": [
+        "No",
+        "Occasionally",
+        "Yes"
+      ]
+    },
+    "verification_document": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::verification-document.verification-document",
+      "inversedBy": "member_id"
+    },
+    "family_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::family-profile.family-profile",
+      "mappedBy": "member_id"
+    },
+    "match_review": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::match-review.match-review",
+      "inversedBy": "potential_match_id"
+    },
+    "religious_info": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.religious-info"
+    },
+    "profile_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::message.message",
+      "mappedBy": "receiver_id"
+    },
+    "interests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::interest.interest",
+      "mappedBy": "interested_user"
+    },
+    "privacy_setting": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::privacy-setting.privacy-setting",
+      "mappedBy": "member_id"
+    },
+    "report": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::report.report",
+      "mappedBy": "reported_user"
+    },
+    "block": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::block.block",
+      "mappedBy": "blocked_profile"
+    },
+    "education_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::education-info.education-info",
+      "inversedBy": "member_id"
+    },
+    "family_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::family-information.family-information",
+      "inversedBy": "member_id"
+    },
+    "hobbies_and_interest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hobbies-and-interest.hobbies-and-interest",
+      "inversedBy": "member_id"
+    },
+    "horoscope_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::horoscope-information.horoscope-information",
+      "inversedBy": "member_id"
+    },
+    "income": {
+      "type": "biginteger"
+    },
+    "partner_preference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::partner-preference.partner-preference",
+      "mappedBy": "member_id"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "component.location"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "recipients"
+    },
+    "support_ticket": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::support-ticket.support-ticket",
+      "mappedBy": "member_id"
+    },
+    "background_verification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::background-verification.background-verification",
+      "mappedBy": "member_id"
+    },
+    "trust_badges": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::trust-badge.trust-badge",
+      "mappedBy": "members"
+    },
+    "purchase": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchase.purchase",
+      "mappedBy": "member"
+    },
+    "success_story": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::success-story.success-story",
+      "mappedBy": "member"
+    },
+    "community_post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::community-post.community-post",
+      "mappedBy": "member_id"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event",
+      "mappedBy": "organizer"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "mappedBy": "members"
+    },
+    "community_comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::community-comment.community-comment",
+      "mappedBy": "member_id"
+    },
+    "feedback_and_rating": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::feedback-and-rating.feedback-and-rating",
+      "mappedBy": "profile_id"
+    },
+    "socialnetworkings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::socialnetworking.socialnetworking",
+      "mappedBy": "user_2"
+    },
+    "socialnw_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::socialnw-post.socialnw-post",
+      "mappedBy": "likes"
+    },
+    "socialnw_post": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::socialnw-post.socialnw-post",
+      "mappedBy": "author"
+    },
+    "predefined_message": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::predefined-message.predefined-message",
+      "mappedBy": "member"
+    },
+    "video_profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video-profile.video-profile",
+      "mappedBy": "user"
+    },
+    "notification_setting": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notification-setting.notification-setting",
+      "mappedBy": "user"
+    },
+    "social_media_verification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::social-media-verification.social-media-verification",
+      "mappedBy": "user"
+    },
+    "languages_spoken": {
+      "type": "string"
+    },
+    "budget_calculators": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::budget-calculator.budget-calculator",
+      "mappedBy": "member"
+    },
+    "checklist_organizers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::checklist-organizer.checklist-organizer",
+      "mappedBy": "member"
+    },
+    "notification": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "member_id"
+    }
+  }
+}

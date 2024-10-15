@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "family_informations",
+  "info": {
+    "singularName": "family-information",
+    "pluralName": "family-informations",
+    "displayName": "family information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "family_type": {
+      "type": "enumeration",
+      "enum": [
+        "Joint Family",
+        "Nuclear Family",
+        "Others"
+      ]
+    },
+    "family_status": {
+      "type": "enumeration",
+      "enum": [
+        "Middle Class",
+        "Upper-Middle Class",
+        "High Class",
+        "Rich/Affluent"
+      ]
+    },
+    "family_value": {
+      "type": "enumeration",
+      "enum": [
+        "Orthodox",
+        "Traditional",
+        "Moderate",
+        "Liberal"
+      ]
+    },
+    "home_type": {
+      "type": "enumeration",
+      "enum": [
+        "Own Home",
+        "Rented",
+        "Apartment",
+        "villa"
+      ]
+    },
+    "living_situation": {
+      "type": "enumeration",
+      "enum": [
+        "Living with Parents",
+        "Living Alone",
+        "Living with Roommates",
+        "Living with Family",
+        "Living in a Joint Family",
+        "Living in Own House",
+        "Living in Rented Accommodation",
+        "Living in a Hostel/PG",
+        "Living Abroad"
+      ]
+    },
+    "father_details": {
+      "type": "enumeration",
+      "enum": [
+        "Employed",
+        "Not Employed",
+        "Retired",
+        "Business Man",
+        "Professional",
+        "Passed Away"
+      ]
+    },
+    "mother_details": {
+      "type": "enumeration",
+      "enum": [
+        "Employed",
+        "Not Employed",
+        "Retired",
+        "Business Women",
+        "Professional",
+        "Passed Away"
+      ]
+    },
+    "no_elder_brother": {
+      "type": "integer"
+    },
+    "no_younger_bro": {
+      "type": "integer"
+    },
+    "no_married_bro": {
+      "type": "integer"
+    },
+    "no_elder_sister": {
+      "type": "integer"
+    },
+    "no_younger_sister": {
+      "type": "integer"
+    },
+    "family_origin": {
+      "type": "string"
+    },
+    "family_details": {
+      "type": "text"
+    },
+    "member_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::member.member",
+      "mappedBy": "family_information"
+    }
+  }
+}

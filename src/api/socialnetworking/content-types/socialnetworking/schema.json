@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "socialnetworkings",
+  "info": {
+    "singularName": "socialnetworking",
+    "pluralName": "socialnetworkings",
+    "displayName": "socialnetworking ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_1": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "socialnetworkings"
+    },
+    "user_2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "socialnetworkings"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Send Request",
+        "Pending",
+        "Accepted",
+        "Blocked"
+      ]
+    }
+  }
+}

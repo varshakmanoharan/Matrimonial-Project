@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "success_metrics",
+  "info": {
+    "singularName": "success-metric",
+    "pluralName": "success-metrics",
+    "displayName": "success metric"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "successful_connections": {
+      "type": "integer"
+    },
+    "number_of_matches": {
+      "type": "integer"
+    },
+    "marriages": {
+      "type": "integer"
+    },
+    "last_updated": {
+      "type": "date"
+    }
+  }
+}
