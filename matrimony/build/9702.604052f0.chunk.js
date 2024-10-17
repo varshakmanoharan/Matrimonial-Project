@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmatrimony=self.webpackChunkmatrimony||[]).push([[9702],{99702:e=>{e.exports=JSON.parse('{"country-select.label":"Land","country-select.description":"Eine Auswahl aller L\xE4nder","country-select.unsupported-country-code":"Der L\xE4ndercode \\"{countryCode}\\" wird nicht unterst\xFCtzt"}')}}]);
